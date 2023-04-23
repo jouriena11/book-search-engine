@@ -1,13 +1,21 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
-// TODO: should getMe get password? where is the password decoded?
+// TODO: to review 
 
 export const GET_ME = gql`
-    query getMe {
-        me {
-            _id
-            username
-            password
-        }
+  query Me {
+    me {
+      username
+      email
+      bookCount
+      savedBooks {
+        bookId
+        authors
+        description
+        title
+        image
+        link
+      }
     }
-`
+  }
+`;

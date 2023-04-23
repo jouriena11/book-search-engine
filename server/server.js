@@ -13,7 +13,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
-  introspection: true, // TODO: is this necessary?
+  introspection: true, // TODO: to change to 'false' when in production mode
 })
 
 app.use(express.urlencoded({ extended: true }));

@@ -4,17 +4,20 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        // TODO: is it necessary to include getSingleUser? It's in user-controller.js but don't know what the API is for.
-        // TODO: is { user } argument correct?
-        user: async(parent, { user }) => {
-            return User.findOne({ _id: user._id });
-        },
+        // user: async(parent, { user }) => {
+        //     return User.findOne({ _id: user._id });
+        // },
         me: async (parent, args, context) => {
             if(context.user) {
                 return User.findOne({ _id: context.user._id});
             }
             throw new AuthenticationError('You need to be logged in!');
         },
+        // me: async (parent, args) => {
+        //     const user = await User.find({})
+        //     console.log(user);
+        //     return user
+        // }
     },
 
     Mutation: {
