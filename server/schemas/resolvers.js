@@ -25,16 +25,15 @@ const resolvers = {
             const newUser = await User.create({username, email, password});
             const token = signToken(newUser)
 
-            return { token, newUser }
+            return { token, user: newUser }
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-
             if(!email) {
                 throw new AuthenticationError('No user account with this email is found.');
             };
 
-            const verifiedPw = await User.isCorrectPassword(password)
+            const verifiedPw = await user.isCorrectPassword(password);
 
             if(!verifiedPw) {
                 throw new AuthenticationError('Incorrect password!');
@@ -77,7 +76,7 @@ const resolvers = {
             if(context.user) {
                 return User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $pull: { savedBooks: bookId }},
+                    { $pull: { savedBooks: {bookId} }},
                     { new: true }
                 );
             }

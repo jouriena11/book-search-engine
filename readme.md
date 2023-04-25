@@ -53,7 +53,7 @@ which must be installed separately
 
 ---
 ## **Future Development**
-
+- to include `removeUser` mutation (which would also invoke removeBook)
 
 ---
 ## **Contact**
@@ -61,3 +61,6 @@ which must be installed separately
 Please feel free to contact me through any of the following channels
 - Email: p.teeraprasert@gmail.com 
 - LinkedIn: https://www.linkedin.com/in/piyawit-teeraprasert/
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoidXNlcjUiLCJlbWFpbCI6InVzZXI1QHRlc3QuY29tIiwiX2lkIjoiNjQ0NjA4YjI1OWU1Yjg5NzgyZWVlYzA4In0sImlhdCI6MTY4MjMxMTM0NiwiZXhwIjoxNjgyMzE4NTQ2fQ.PIpDq1YMe8bohNcTPqcdGwGPRTnVb4mJ7e1H4Oqi98c
