@@ -54,7 +54,7 @@ const resolvers = {
                     { _id: context.user._id },
                     {
                         $addToSet: { savedBooks: {
-                            authors: authors, // TODO: how to make sure that values passed from client is in array format?
+                            authors: authors,
                             description: description,
                             bookId: bookId,
                             image: image,

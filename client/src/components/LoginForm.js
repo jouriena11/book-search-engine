@@ -29,7 +29,7 @@ const LoginForm = () => {
     }
 
     try {
-      const { data } = await loginUser({ variables: { ...userFormData }})
+      const { data } = await loginUser({ variables: { ...userFormData }}) // destructuring resp.data
       const { token, user } = data.login
       // const token = resp.data.login.token;
       // const user = resp.data.login.user;

@@ -27,7 +27,7 @@ const authLink = setContext((_, { headers }) => { // setContext() allows you to 
 })
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink), // TODO: to review the concept of URI and URL
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 })
 
